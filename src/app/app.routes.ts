@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { UsingmattableComponent } from './usingmattable/usingmattable.component';
 
 import { AddStudentComponent } from './add-student/add-student.component';
+import { AddStudentComponent1 } from './add-student1/add-student1.component';
 
 export const routes: Routes = [
 
@@ -42,5 +43,9 @@ export const routes: Routes = [
       {
         path:'student/edit/:id',
         component: AddStudentComponent
+      },
+      {
+        path:'student/add',
+        component: AddStudentComponent1
       }
 ];

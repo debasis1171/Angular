@@ -1,0 +1,74 @@
+<h1>Add Student to the Table</h1>
+<form  (ngSubmit)="onSubmit()">
+  <div class="example-container">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>NAME</mat-label>
+      <input matInput [(ngModel)]="student.name" name="name">
+    </mat-form-field>
+    
+       <!-- gender column -->
+        <h4> Put your Gender</h4>
+       <mat-radio-group aria-label="Gender" [(ngModel)]="student.gender" name="gender">
+        <mat-radio-button value="Male">Male</mat-radio-button>
+        <mat-radio-button value="Female">Female</mat-radio-button>
+        <mat-radio-button value="Transgender">Transgender</mat-radio-button>
+      </mat-radio-group>
+      
+      
+      
+      <mat-card class="example-result-card">
+        <mat-card-content>
+          <h2>Age</h2>
+      
+          <div class="example-label-container">
+            <label id="example-name-label" class="example-name-label">Value</label>
+            <label class="example-value-label">{{slider.value}}</label>
+          </div>
+          <mat-slider
+              class="example-margin"
+              [max]="15"
+              [min]="1"
+              [step]="1">
+            <input matSliderThumb [(ngModel)]="student.age" name="age" #slider>
+          </mat-slider>
+        </mat-card-content>
+      </mat-card>
+      
+      
+      
+      <mat-card class="example-result-card">
+        <mat-card-content>
+          <h2>RollNo</h2>
+      
+          <div class="example-label-container">
+            <label id="example-name-label" class="example-name-label">Value</label>
+            <label class="example-value-label">{{slider1.value}}</label>
+          </div>
+          <mat-slider
+              class="example-margin"
+              [max]="50"
+              [min]="1"
+              [step]="1">
+            <input matSliderThumb [(ngModel)]="student.rollno" name="rollno" #slider1>
+          </mat-slider>
+        </mat-card-content>
+      </mat-card>
+    
+
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Date of Birth" [(ngModel)]="student.dateofbirth" name="dateofbirth">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+
+    <mat-checkbox [(ngModel)]="student.agree" name="agree">Agree!</mat-checkbox>
+    <!-- <mat-form-field appearance="fill" class="full-width">
+      <mat-label>PARENT DETAILS</mat-label>
+      <input matInput formControlName="parentDetails">
+    </mat-form-field> -->
+
+    <input type="submit" value="SUBMIT" class="submit-button">
+  </div>
+</form>
+<pre>{{ student | json }}</pre>

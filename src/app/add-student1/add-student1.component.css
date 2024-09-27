@@ -1,0 +1,33 @@
+.example-container{
+    margin-top: 20px; /* Adjust the margin as needed */
+    padding: 20px; /* Adjust the padding as needed */
+    width: 100%; /* Ensure the container takes full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange children in a column */
+    gap: 10px; /* Add space between form fields */
+  }
+  
+  .full-width {
+    width: 100%; /* Ensure the form fields take full width */
+  }
+  
+  .submit-button {
+    margin-top: 20px; 
+    padding: 10px 20px; 
+    font-size: 16px;
+  }
+  example-result-card h2 {
+    margin: 0 8px;
+  }
+  
+  .example-label-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 10px 0;
+    max-width: 284px;
+  }
+  
+  .example-result-card .example-value-label {
+    font-weight: 600;
+  }
