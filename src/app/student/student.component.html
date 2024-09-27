@@ -1,0 +1,30 @@
+
+<!-- @for (student of studentList; track student.id) {
+    {{ student.name }}
+   -->
+<table style="width:100%">
+ <thead  bgcolor="grey" >  
+  <tr>
+    <th>name</th>
+    <th>Roll.no</th>
+    <th>Class</th>
+    <th>age</th>
+    
+    <th>Actions</th>
+  </tr>
+ </thead>
+  <tbody bgcolor="lightgrey">@for (student of studentList; track student.id) {
+    <tr>
+      <td>{{ student.name }}</td>
+      <td>{{ student.rollNo }}</td>
+      <td>{{ student.class }}</td>
+      <td>{{ student.age }}</td>
+      <td>{{ student.parentDetails}}</td>
+      <td>
+        <button type="button" (click)="edit(student.id)" class="v">Edit</button>
+        <button type="button" (click)="delete(student.id)" class="v">Delete</button>
+      </td>
+    </tr>
+  }
+</tbody>
+</table>

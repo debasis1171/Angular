@@ -1,0 +1,9 @@
+table, th, td {
+    border:1px solid black;
+  }
+  .v{
+    margin-top: 20px; 
+  padding: 10px 20px; 
+  font-size: 16px;
+  }
+  

@@ -1,0 +1,60 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+    <!-- id Column -->
+      <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+  
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+<!--   
+       gender column
+    <mat-radio-group aria-label="Gender">
+      <mat-radio-button value="1">Male</mat-radio-button>
+      <mat-radio-button value="2">Female</mat-radio-button>
+      <mat-radio-button value="2">Transgender</mat-radio-button>
+    </mat-radio-group> -->
+
+    <!-- class Column -->
+    <ng-container matColumnDef="class">
+      <th mat-header-cell *matHeaderCellDef>Class </th>
+      <td mat-cell *matCellDef="let element"> {{element.class}} </td>
+    </ng-container>
+  
+    <!-- Age Column -->
+    <ng-container matColumnDef="age">
+      <th mat-header-cell *matHeaderCellDef>age</th>
+      <td mat-cell *matCellDef="let element"> {{element.age}} </td>
+    </ng-container>
+
+  <!-- rollno Column -->
+  <ng-container matColumnDef="rollno">
+    <th mat-header-cell *matHeaderCellDef>RollNo</th>
+    <td mat-cell *matCellDef="let element"> {{element.rollNo}} </td>
+  </ng-container>
+
+  <!-- parentdetails Column -->
+  <ng-container matColumnDef="parentdeails">
+    <th mat-header-cell *matHeaderCellDef>ParentDeatils</th>
+    <td mat-cell *matCellDef="let element"> {{element.parentDetails}} </td>
+  </ng-container>
+ <!-- actions Column -->
+ 
+ <ng-container matColumnDef="actions">
+  <th mat-header-cell *matHeaderCellDef>Actions</th>
+  <td mat-cell *matCellDef="let element">
+  <button type="button" (click)="edit(element.id)" class="v">Edit</button>
+    <button type="button" (click)="delete(element.id)" class="v">Delete</button>
+  </td>
+</ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  

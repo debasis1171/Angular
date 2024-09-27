@@ -1,0 +1,30 @@
+<h1>Add Student to the Table</h1>
+<form [formGroup]="studentForm" (ngSubmit)="onSubmit()">
+  <div class="example-container">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>NAME</mat-label>
+      <input matInput formControlName="name">
+    </mat-form-field>
+  
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>AGE</mat-label>
+      <!-- <mat-slider min="1" max="15" step="1" formControlName="age"></mat-slider> -->
+      <input matInput formControlName="age">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>ROLL NO</mat-label>
+      <!-- <mat-slider min="1" max="50" step="1" formControlName="rollNo"></mat-slider> -->
+      <input matInput formControlName="rollNo">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>PARENT DETAILS</mat-label>
+      <input matInput formControlName="parentDetails">
+    </mat-form-field>
+
+    <input type="submit" value="SUBMIT" class="submit-button">
+  </div>
+</form>
+<pre>{{ studentForm.value | json }}</pre>
